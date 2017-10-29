@@ -11,7 +11,9 @@ class Tasks extends Whale_controller {
     /* List all tasks */
     public function index(){
 
-        $this->get_list();
+        $title = 'Test';
+        $data['title'] = $title;
+        $this->load->view('whale/tasks/manage', $data);
 
     }
 

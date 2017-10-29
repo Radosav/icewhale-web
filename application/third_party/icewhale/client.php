@@ -112,8 +112,6 @@ class Icewhale_Client
         $response = curl_exec($ch);
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
-//        $response = '[{"name":"Renamed","start":"0001-01-01T00:00:00Z","due":"0001-01-01T00:00:00Z","assignee":{},"time spent":"0001-01-01T00:00:00Z"},{"id":5,"name":"Set up Server","start":"0001-01-01T00:00:00Z","due":"0001-01-01T00:00:00Z","assignee":{"id":2,"name":"Ahmet","description":"Pro. Sys admin and Security Expert ( Hacker )","status":true,"cost":"0.75 coffee/h, 1.5 Packs of cigarettes/day","mail":"ahmet.gudenoglu@gmail.com","role":"Admin","position":"System Admin","image":"http://3.images.southparkstudios.com/blogs/southparkstudios.com/files/2014/02/1008-MWBZ-faq-q1.jpg?quality=0.8"},"time spent":"0001-01-01T00:00:00Z"},{"id":6,"name":"Write API","start":"0001-01-01T00:00:00Z","due":"0001-01-01T00:00:00Z","assignee":{"id":1,"name":"Radosav","description":"Totally Awsome Coder","status":true,"cost":"1 coffee/h, 2 Packs of cigarettes/day","mail":"rasabrajic@gmail.com","role":"Admin","position":"Api Coder","image":"https://avatars1.githubusercontent.com/u/6116078?s=400\u0026u=85e96b04d88f1dddb7b5603bdcbab1002cadc71c\u0026v=4"},"time spent":"0001-01-01T00:00:00Z"},{"name":"Renamed","start":"0001-01-01T00:00:00Z","due":"0001-01-01T00:00:00Z","assignee":{},"time spent":"0001-01-01T00:00:00Z"}]';
-
         $result = array(
             'IceObj'=>(isJson($response) ? json_decode($response,true) : "NULL"),
             'Result'=>$httpcode,

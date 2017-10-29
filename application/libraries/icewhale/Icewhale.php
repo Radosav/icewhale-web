@@ -13,7 +13,7 @@ class Icewhale
 
     }
 
-    public function tasks(){
+    public function tasks($id = null){
 
         try{
 
@@ -27,8 +27,8 @@ class Icewhale
             $response = array(
                 'ResultState'=>$operation->getResultCode(),
                 'ResultMessage'=>$operation->getResultMessage(),
-                'TotalItems'=>$operation->getTotalResultItems(),
-                'ResultObj'=>$operation->getResultObjectData()
+                'TotalItems'=>$operation->getTotalResultItems($id),
+                'ResultObj'=>$operation->getResultObjectData($id)
             );
 
         }catch(Icewhale_Exception $e){

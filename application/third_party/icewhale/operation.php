@@ -71,9 +71,9 @@ class Icewhale_Operation
         {
             return $this->_result_object;
         }
-        elseif (isset($this->_result_object[$key]))
+        elseif (isset($this->_result_object['id_'.$key]))
         {
-            return $this->_result_object[$key];
+            return $this->_result_object['id_'.$key];
         }
         return NULL;
     }
@@ -84,9 +84,9 @@ class Icewhale_Operation
         {
             return count($this->_result_object);
         }
-        elseif (isset($this->_result_object[$key]))
+        elseif (isset($this->_result_object['id_'.$key]))
         {
-            return count($this->_result_object[$key]);
+            return count($this->_result_object['id_'.$key]);
         }
         return 0;
     }
@@ -138,7 +138,7 @@ class Icewhale_Operation
             foreach($simplexml->IceObj as $key=>$item)
             {
 
-                $this->_result_object[] = $item;
+                $this->_result_object['id_'.$item->id] = $item;
             }
         }
     }

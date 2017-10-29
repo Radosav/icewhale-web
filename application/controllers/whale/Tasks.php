@@ -21,5 +21,26 @@ class Tasks extends Whale_controller {
 
         header('Content-Type: application/json');
         echo json_encode( $response );
+        die();
+    }
+
+    public function task($id=""){
+
+        header('Content-Type: application/json');
+
+        if (!is_numeric($id)){
+            $response = array(
+                'Result'=>408,
+                'Message'=>Icewhale_Translator::getHttpResponse(408)
+            );
+
+            echo json_encode( $response );
+            die();
+        }
+
+        $response = $this->icewhale->tasks($id);
+
+        echo json_encode( $response );
+        die();
     }
 }

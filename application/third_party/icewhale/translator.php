@@ -13,7 +13,8 @@ class Icewhale_Translator
     {
         $translations = array(
             '0' => 'Can not complete the process.',
-            '200'=>'OK'
+            '200'=>'OK',
+            '408'=>'Missing ID parameter!'
         );
 
         if (isset($translations[$code]))

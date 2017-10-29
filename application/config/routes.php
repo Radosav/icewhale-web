@@ -57,3 +57,5 @@ $route['/']  = "home";
 
 # TASKS
 $route['tasks']  = "whale/tasks";
+$route['tasks/task']  = "whale/tasks/task";
+$route['tasks/task/(:num)']  = "whale/tasks/task/$1";

@@ -12,6 +12,7 @@ class Tasks extends Whale_controller {
     public function index(){
 
         $title = 'Test';
+        $data['tasks'] = $this->icewhale->tasks();
         $data['title'] = $title;
         $this->load->view('whale/tasks/manage', $data);
 
@@ -50,7 +51,7 @@ class Tasks extends Whale_controller {
             echo json_encode( $response );
             die();
         }
-        
+
         if (!is_numeric($id)){
             $response = array(
                 'Result'=>408,

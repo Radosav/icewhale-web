@@ -96,7 +96,8 @@ $autoload['helper'] = array(
     'url',
     'xml_value_prep',
     'json_misc',
-    'html'
+    'html',
+    'table'
 );
 
 if(file_exists(APPPATH.'helpers/my_functions_helper.php')){

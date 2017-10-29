@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-define('APP_BASE_URL','http://54.93.231.19/');
+define('APP_BASE_URL','http://dev.icewhale.io/');
 
 /*
 |--------------------------------------------------------------------------

@@ -1,3 +1,5 @@
+</div>
+<!-- /#wrapper -->
 <!-- jQuery -->
 <script src="<?php echo base_url('assets/jquery/jquery.min.js'); ?>"></script>
 

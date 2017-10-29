@@ -40,6 +40,16 @@ class Tasks extends Whale_controller {
 
         $response = $this->icewhale->tasks($id);
 
+        if (!$response['ResultObj']){
+            $response = array(
+                'Result'=>409,
+                'Message'=>Icewhale_Translator::getHttpResponse(409)
+            );
+
+            echo json_encode( $response );
+            die();
+        }
+
         echo json_encode( $response );
         die();
     }

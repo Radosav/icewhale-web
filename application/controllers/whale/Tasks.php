@@ -19,9 +19,20 @@ class Tasks extends Whale_controller {
 
     public function get_list(){
 
+        header('Content-Type: application/json');
+
+        if (!$this->input->is_ajax_request()) {
+            $response = array(
+                'Result'=>406,
+                'Message'=>Icewhale_Translator::getHttpResponse(406)
+            );
+
+            echo json_encode( $response );
+            die();
+        }
+
         $response = $this->icewhale->tasks();
 
-        header('Content-Type: application/json');
         echo json_encode( $response );
         die();
     }
@@ -30,6 +41,16 @@ class Tasks extends Whale_controller {
 
         header('Content-Type: application/json');
 
+        if (!$this->input->is_ajax_request()) {
+            $response = array(
+                'Result'=>406,
+                'Message'=>Icewhale_Translator::getHttpResponse(406)
+            );
+
+            echo json_encode( $response );
+            die();
+        }
+        
         if (!is_numeric($id)){
             $response = array(
                 'Result'=>408,

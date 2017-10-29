@@ -1,3 +1,3 @@
-<pre>
-    <?php print_r($title)?>
-</pre>
+<?php init_head(); ?>
+
+<?php init_tail(); ?>

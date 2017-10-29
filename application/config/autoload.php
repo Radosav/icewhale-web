@@ -95,7 +95,8 @@ array_push($autoload['drivers'],'session');
 $autoload['helper'] = array(
     'url',
     'xml_value_prep',
-    'json_misc'
+    'json_misc',
+    'html'
 );
 
 if(file_exists(APPPATH.'helpers/my_functions_helper.php')){

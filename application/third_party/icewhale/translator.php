@@ -14,6 +14,7 @@ class Icewhale_Translator
         $translations = array(
             '0' => 'Can not complete the process.',
             '200'=>'OK',
+            '406'=>'Bad Reuest',
             '408'=>'Missing ID parameter!',
             '409'=>'No result(s)'
         );

@@ -1,1 +1,3 @@
-<h1>IceWhale Opensource Task Manager</h1>
+<?php init_head(); ?>
+
+<?php init_tail(); ?>
